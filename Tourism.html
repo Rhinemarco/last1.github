@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-right: 27rem;
+        padding-left: 2rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+      }
+      ul {
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1 1 100px;
+      }
+
+      .logo img {
+        width: 60px;
+      }
+
+      .logo span {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 40px;
+        padding: 10px 0;
+      }
+
+      ul li a {
+        color: black;
+        font-size: 25px;
+      }
+
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .show .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+
+      .show .bar2 {
+        opacity: 0;
+      }
+
+      .show .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+
+      .menu-logo {
+        display: none;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .menu-logo img {
+        width: 60px;
+      }
+
+      @media (max-width: 780px) {
+        .burger {
+          display: block;
+        }
+        .logo {
+          display: none;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          text-align: center;
+          padding: 10px 0;
+        }
+
+        nav ul.show {
+          display: flex;
+        }
+
+        .menu-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px;
+          border-bottom: 1px solid #ddd;
+        }
+        .map_title h3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .map_title .img {
+          margin-right: 200px;
+        }
+          .item {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+          }
+      }
+
+      section {
+        margin-top: 75px;
+        width: auto;
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .pic {
+        background-image: url("20170612_155347(1)(1).png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: auto;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .title p {
+        background-color: rgba(217, 217, 217, 1);
+        padding: 0 5px 0 5px;
+        font-size: 70px;
+        border-radius: 10px;
+        color: white;
+        margin-left: 60px;
+      }
+      .container {
+        margin-top: 30px;
+        gap: 50px;
+        background: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+       
+       
+        align-items: center;
+      
+       
+      }
+      .item {
+     
+        align-items: center;
+        gap: 20px;
+        display: flex;
+        text-align: center;
+         flex-wrap: wrap;
+      
+      }
+      .text p{
+        width: 611px;
+        font-size: 20px;
+      }
+
+      footer {
+        background-color: rgba(217, 217, 217, 1);
+        height: 101px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="296727749_109755761831799_371819.png" alt="logo" />
+        <span>Sapang Dalaga</span>
+      </div>
+
+      <div class="burger" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <nav>
+        <ul id="menu">
+          <li class="menu-logo">
+            <img src="296727749_109755761831799_371819.png" alt="logo" />
+            <h3>Sapang Dalaga</h3>
+          </li>
+          <li class="menu"><a href="index.html">Home</a></li>
+          <li class="menu"><a href="Municipality.html">Municipality</a></li>
+          <li class="menu"><a href="Tourism.html">Tourism</a></li>
+          <li class="menu"><a href="About_us.html">About us</a></li>
+          <li class="menu"><a href="Contact_us.html">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="pic">
+        <div class="title"><p>Tourism</p></div>
+      </div>
+      <div class="container">
+        <div class="item">
+          <div class="pic_text">
+            <h2>Caluya Shrine Pilgrimage</h2>
+            <img
+              src="Sapang Dalaga shrine.png"
+              alt="Caluya Shrine Pilgrimage"
+              width="350px"
+            />
+          </div>
+          <div class="text">
+            <p>The  Caluya Shrine in Sapang Dalaga, Misamis Occidental, is a revered destination for pilgrims seeking spiritual solace, reflection, and a deeper connection with their faith. Nestled amidst the natural beauty of the region, this pilgrimage site holds a significant place in the hearts of locals and draws visitors from near and far. Let's explore the Caluya Shrine pilgrimage and discover the enriching experiences it offers.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic_text">
+            <h2>Floating Cottage</h2>
+            <img
+              src="Sapang Dalaga-Floating.png"
+              alt="Floating Cottage"
+              width="350px"
+              height="270px"
+            />
+          </div>
+
+          <div class="text">
+            <p>If you're looking for a unique dining experience that combines good food, tranquil surroundings, and a touch of adventure, Sapang Dalaga Floating Cottages is the place for you. Located in the Sinakaban community of  Misamis Occidental, this overwater villa offers a unique opportunity to enjoy a delicious meal while immersing yourself in the natural beauty of Sapang Dalaga. 
+Located on the tranquil waters of the Sapang Dalaga River, our water cottages provide a stunning setting for an unforgettable dining experience. Surrounded by lush greenery and the calm flow of a river, you can enjoy delicious cuisine while feeling the tranquility of nature. </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="pic_text">
+            <h2>Baga Falls</h2>
+            <img src="Sapang Dalaga Falls.png" alt="Baga Falls" width="350px" />
+
+            </div>
+            <div class="text">
+              <p>Located in the picturesque town of Sapang Dalaga, West Misamis, Sapang Dalaga Waterfall is an enchanting natural wonder that captivates visitors with its beauty and tranquility. With its scenic surroundings and refreshing atmosphere, the island is a must-see for nature lovers and adventure seekers alike. 
+Sapang Dalaga Waterfall, also known as Baga Falls, is a stunning waterfall set in a lush forest that offers a peaceful retreat from the hustle and bustle of city life. The sight of water flowing down from a high place is overwhelming, and visitors are awed by the beauty of nature. </p>
+            </div>
+          </div>
+
+           <div class="item">
+          <div class="pic_text">
+            <h2>Sapang Dalaga Floating Playground</h2>
+            <img
+              src="Sapang Dalaga Floating Playgroun.png"
+              alt="Sapang Dalaga Floating Playground"
+              width="350p"
+              height="270px"
+            />
+          </div>
+          <div class="text">
+            <p>
+             Experience a unique adventure at the Sapang Dalaga Floating Playground, a recreational area situated on a beautiful river. Enjoy exciting activities such as swimming, kayaking, and water sliding on the floating platforms, providing endless fun for visitors of all ages.
+            </p>
+          </div>
+        </div>
+        </div>
+       
+      </div>
+    </section>
+    <footer>
+      <div class="foot_text">
+        <h3>Copyright © 2025 Sapang Dalaga</h3>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+      document.querySelector(".burger").classList.toggle("show");
+    }
+  </script>
+</html>

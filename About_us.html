@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-right: 27rem;
+        padding-left: 2rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+      }
+      ul {
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1 1 100px;
+      }
+
+      .logo img {
+        width: 60px;
+      }
+
+      .logo span {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 40px;
+        padding: 10px 0;
+      }
+
+      ul li a {
+        color: black;
+        font-size: 25px;
+      }
+
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .show .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+
+      .show .bar2 {
+        opacity: 0;
+      }
+
+      .show .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+
+      .menu-logo {
+        display: none;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .menu-logo img {
+        width: 60px;
+      }
+
+      @media (max-width: 780px) {
+        .burger {
+          display: block;
+        }
+        .logo {
+          display: none;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          text-align: center;
+          padding: 10px 0;
+        }
+
+        nav ul.show {
+          display: flex;
+        }
+
+        .menu-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px;
+          border-bottom: 1px solid #ddd;
+        }
+        .map_title h3 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .map_title .img {
+          margin-right: 200px;
+        }
+      }
+
+      section {
+        margin-top: 75px;
+        width: auto;
+        height: 250vh;
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .pic {
+        background-image: url("20170612_155347(1)(1).png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: auto;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .title p {
+        background-color: rgba(217, 217, 217, 1);
+        padding: 0 5px 0 5px;
+        font-size: 70px;
+        border-radius: 10px;
+        color: white;
+        margin-left: 60px;
+      }
+
+      footer {
+        background-color: rgba(217, 217, 217, 1);
+        height: 101px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="296727749_109755761831799_371819.png" alt="logo" />
+        <span>Sapang Dalaga</span>
+      </div>
+
+      <div class="burger" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <nav>
+        <ul id="menu">
+          <li class="menu-logo">
+            <img src="296727749_109755761831799_371819.png" alt="logo" />
+            <h3>Sapang Dalaga</h3>
+          </li>
+          <li class="menu"><a href="index.html">Home</a></li>
+          <li class="menu"><a href="Municipality.html">Municipality</a></li>
+          <li class="menu"><a href="Tourism.html">Tourism</a></li>
+          <li class="menu"><a href="About_us.html">About us</a></li>
+          <li class="menu"><a href="Contact_us.html">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="pic">
+        <div class="title"><p>About us</p></div>
+      </div>
+      <div class="land">
+        <p>
+          The municipality has a land area of 93.93 square kilometers or 36.27
+          square miles which constitutes 4.68% of Misamis Occidental's total
+          area. Its population as determined by the 2020 Census was 20,490. This
+          represented 3.32% of the total population of Misamis Occidental
+          province, or 0.41% of the overall population of the Northern
+          Mindanao region. Based on these figures, the population density is
+          computed at 218 inhabitants per square kilometer or 565 inhabitants
+          per square mile.
+        </p>
+      </div>
+
+      <div class="econ">
+        <h3>Economy</h3>
+        <p>
+          It is rich in mineral resources such as gold, copper and manganese,
+          and has mountains, rivers, waterfalls and beaches. Baga (meaning
+          "waterfalls" in the native language) is one kilometer from the town
+          center and can be reached by foot or motor vehicles. Mountains, such
+          as Mount Dasa and Mount Pedoluan, are also nearby. Casul Bay, which
+          connects to Murcielagos Bay, can be navigated.
+        </p>
+      </div>
+
+      <div class="his">
+        <h3>History</h3>
+        <p>
+          Not much is known about the history of Sapang Dalaga except for the
+          fact that its name was derived from an old Visayan word that can be
+          traced back to the 14th century, even before the Spaniards came to
+          colonize the Philippines. “Sapa ng Dalaga” means “maiden at the creek”
+          As for the names of some of the barangays, these were also taken from
+          names of trees and rivers. Sapang Dalaga was created as a municipality
+          on August 12, 1957.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="foot_text">
+        <h3>Copyright © 2025 Sapang Dalaga</h3>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+      document.querySelector(".burger").classList.toggle("show");
+    }
+  </script>
+</html>
